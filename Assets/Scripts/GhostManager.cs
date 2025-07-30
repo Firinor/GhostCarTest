@@ -22,7 +22,7 @@ public class GhostManager : MonoBehaviour
         Transform PreviousCar = this.car;
         StartNewGhostRecord(car);
         
-        if (this.car is not null)
+        if (PreviousCar is not null)
         {
             CreateNewGhost();
         }
@@ -98,10 +98,4 @@ public class GhostManager : MonoBehaviour
             ghostCar.rotation = Quaternion.Euler(carGhostsReplays[ghostCar.GetSiblingIndex(), index].Rotation);
         }
     }
-}
-
-public struct TransformSavePoint
-{
-    public Vector3 Position;
-    public Vector3 Rotation;
 }
