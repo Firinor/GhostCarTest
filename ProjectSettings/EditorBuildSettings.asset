@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/Ash Assets/Sim-Cade Vehicle Physics/Scenes/City Map.unity
+    guid: 082943e73386c4c498509815f50d41ae
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 180c96b80f5fdee40bff21953edf121c, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}

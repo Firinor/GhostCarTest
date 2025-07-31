@@ -59,14 +59,15 @@ namespace Ashsvp
             {
                 currentGearTemp = value;
 
-                if (vehicleController.accelerationInput > 0 && vehicleController.localVehicleVelocity.z > 0 && !AudioSystem.GearSound.isPlaying && vehicleController.vehicleIsGrounded)
+                if (vehicleController.accelerationInput > 0 
+                    && vehicleController.localVehicleVelocity.z > 0 
+                    && !AudioSystem.GearSound.isPlaying 
+                    && vehicleController.vehicleIsGrounded)
                 {
                     vehicleController.VehicleEvents.OnGearChange.Invoke();
                     AudioSystem.GearSound.Play();
                     StartCoroutine(shiftingGear());
                 }
-
-                AudioSystem.engineSound.volume = 0.5f;
             }
         }
 

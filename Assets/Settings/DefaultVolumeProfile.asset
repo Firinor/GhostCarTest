@@ -510,7 +510,7 @@ MonoBehaviour:
     m_Value: 1
   startingPosition:
     m_OverrideState: 1
-    m_Value: 1.25
+    m_Value: 2.07
   scale:
     m_OverrideState: 1
     m_Value: 1.5

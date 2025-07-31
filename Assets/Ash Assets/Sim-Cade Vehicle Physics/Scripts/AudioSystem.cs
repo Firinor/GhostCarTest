@@ -24,18 +24,14 @@ namespace Ashsvp
 
         private void FixedUpdate()
         {
-            soundManager();
+            SoundManager();
         }
 
-        void soundManager()
+        private void SoundManager()
         {
-
             float speed = gearSystem.carSpeed;
-
-            float angularSpeed = GetComponent<Rigidbody>().angularVelocity.magnitude;
-
-            //engineSound.pitch = Mathf.Lerp(minPitch, maxPitch, Mathf.Abs(speed + (verticalInput + angularSpeed/10) * 20) / maxspeed);
             float enginePitch = Mathf.Lerp(minPitch, maxPitch, Mathf.Abs(speed) / gearSystem.gearSpeeds[Mathf.Clamp(gearSystem.currentGear, 0, 4)]);
+            
             if (SimcadeVehicleController.vehicleIsGrounded)
             {
                 engineSound.pitch = Mathf.MoveTowards(engineSound.pitch, enginePitch, 0.02f);
